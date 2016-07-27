@@ -742,19 +742,25 @@ HOST: http://mir24.ru/api/v1
 + Request (application/json)
 
         {
-            "deleted": false,
-            "active": active,
-            "inactive": false,
-            "embargo": true
-            "string": "Путин сделал чудо",
-            "name": true,
-            "supertag": false,
-            "creator": false,
-            "lastRedactor": true,
-            "videoLoader": true,
-            "photoLoader": true,
-            "date": "2016-07-29",
-            "time": "06:16:29",
+            "query": "главный вопрос жизни вселенной и всего такого",
+            "flags": {
+               "deleted": "false",
+               "active": "false",
+               "inactive": "false",
+               "embargo": "false"
+            },
+            "specs": {
+               "date": "2016-07-30",
+               "time": "18:22:04"
+            },
+            "in": {
+               "name": "true",
+               "creator": "false",
+               "supertag": "false",
+               "lastRedactor": "false",
+               "videoLoader": "false",
+               "photoLoader": "false"
+            }
         }
         
 + Response 200 (application/json)
