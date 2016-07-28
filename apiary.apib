@@ -192,32 +192,20 @@ HOST: http://mir24.ru/api/v1
                 }
         }
 
-### Поиск по статьям, сюжетам, новостям, фотолентам и видеосюжетам [POST /relatedSearch]
+### Поиск по связанным материалам: новости, статьи, фотоленты, видеосюжеты [POST /relatedMaterials/search]
 
-Принимает ассоциативный массив или строку. Возвращает ассоциативный массив новостей, сюжетов, статей, фотолент и видеосюжетов в title которых входит принятая подстрока.
+Принимает строку. Возвращает ассоциативный массив новостей, сюжетов, статей, фотолент и видеосюжетов, в title которых входит принятая подстрока.
 
 + Request (application/json)
 
         {
-            "open": false,
-            "deleted": false,
-            "active": false,
-            "inactive": false,
-            "embargo":false,
-            "string": "картофель",
-            "name": false,
-            "supertag": false,
-            "creator": false,
-            "lastRedactor": false,
-            "videoLoader": false,
-            "photoLoader": false,
-            "date": "2016-07-28",
-            "time": "18:25:05",
+          "важная связанная новость"
         }
 
 + Response 200 (application/json)
 
            {
+           "news":{
                "12744": {
                 "status": "active",
                "views": 1885,
@@ -228,7 +216,7 @@ HOST: http://mir24.ru/api/v1
                "lightning": false,
                "promo": false,
                "embargo": 634912200,
-               "title": "Placeat dolorem dolor autuisquam blanditiis quo.",
+               "title": "Очень важная связанная новость.",
                "seo_title": "Placeat dolorem dolor autuisquam blanditiis quo.",
                "advert": "Culpa praesentium tenetur facere in. Culpa reprehenderRerum sed atque voluptate dolorem et velit.",
                "text": "Repudiandae et amet numqus non.",
@@ -259,50 +247,34 @@ HOST: http://mir24.ru/api/v1
                "last_edit_time": 634912200,
                "last_edit_video_by": "ultrices.a@nonjusto.ca",
                "last_edit_photo_by": "ultrices.a@nonjusto.ca"
-            },
-              "12745": {
-                "status": "active",
-               "views": 1885,
-               "author": "Prof. Ben Renner II",
-               "main_center": false,
-               "main_top": false,
-               "rubric_top": false,
-               "lightning": false,
-               "promo": false,
-               "embargo": 634912200,
-               "title": "Placeat dolorem dolor autuisquam blanditiis quo.",
-               "seo_title": "Placeat dolorem dolor autuisquam blanditiis quo.",
-               "advert": "Culpa praesentium tenetur facere in. Culpa reprehenderRerum sed atque voluptate dolorem et velit.",
-               "text": "Repudiandae et amet numqus non.",
-               "topic_id": 10,
-               "topic_title": "ercitationem. Tempora voluptate iste laboriosam neque non asperiores.",
-               "related_news": [5435,2345,3654,4674],
-               "related_video_articles": [3451,2435,3543,4654],
-               "related_articles": [2341,2432,3565,4768],
-               "related_galleries": [1775,6782,5763,4676],
-               "video_src": "http:\/\/path.com",
-               "remove_after_36": false,
-               "last_edit_by": "ultrices.a@nonjusto.ca",
-               "created_by": "millie.zieme@example.net",
-               "country_top": false,
-               "created": 634912200,
-               "updated": 634912200,
-               "images": ["https:\/\/upload.wikimedia.org\/wikipedia\/commons\/8\/85\/Smiley.svg","https:\/\/upload.wikimedia.org\/wikipedia\/commons\/8\/85\/Smiley.svg"],
-               "img_title": "dolor",
-               "img_alt": "Error quod cum sunt rem. Nobis maioreem.",
-               "supertag": 16,
-               "copyright_origin": "Saepe aut qui eum beatae delectus. Aum sit magnam.",
-               "copyright_author": "Voluptatem veniam quia perspiciatis doloribus voluptatem qui. Qui tempora id ut quas quae iure dicta.",
-               "copyright_link": "Et possimus quas consequatur qui optio. Maxime abo.",
-               "geotag": 0,
-               "branches": [16],
-               "tags": [],
-               "last_edit_date": 634912200,
-               "last_edit_time": 634912200,
-               "last_edit_video_by": "ultrices.a@nonjusto.ca",
-               "last_edit_photo_by": "ultrices.a@nonjusto.ca"
+                }
             }
-          }
+        }
+             
+          
+### Поиск по связанным сюжетам [POST /relatedTopics/search]
+
+Принимает строку. Возвращает ассоциативный массив сюжетов, в title которых входит принятая подстрока.
+
++ Request (application/json)
+
+        {
+          "важный связанный сюжет"
+        }
+
++ Response 200 (application/json)
+
+           {
+           "1": {
+                "id": "1",
+                "title": "Очень важный связанный сюжет",
+                "priority": 1,
+                "created": 1467280326861,
+                "updated": 1467280326861,
+                "deleted": false
+                }
+            }
+        }
           
 ### ✔ Удалить модель [PUT /deleteHardCautionDontTouchThis]
 
