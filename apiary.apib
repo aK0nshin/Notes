@@ -690,7 +690,7 @@ HOST: http://mir24.ru/api/v1
 
 ## Статья Article [/article]
 
-### Поиск по статьям [POST /articles/search]
+### ✔ Поиск по статьям [POST /articles/search]
 
     Получает JSON. Если поля name/creator имеют значение true, то ведется поиск статьи, содержащую строку (string) в этих полях и имеющую указанные поля (если их значения тоже true)
     
@@ -763,7 +763,7 @@ HOST: http://mir24.ru/api/v1
                "last_edit_photo_by": "ultrices.a@nonjusto.ca"
             }
 
-### Получить статью по id [GET /article/{id}]
+### ✔ Получить статью по id [GET /article/{id}]
 
 + Parameters
 
@@ -815,7 +815,7 @@ HOST: http://mir24.ru/api/v1
                "last_edit_photo_by": "ultrices.a@nonjusto.ca"
             }
 
-### Получить массив статей [GET /article/{limit}/{offset}]
+### ✔ Получить массив статей [GET /article/{limit}/{offset}]
 
 + Parameters
 
@@ -963,7 +963,7 @@ HOST: http://mir24.ru/api/v1
                 }
             }
 
-### Создать статью [POST /article/add]
+### ✔ Создать статью [POST /article/add]
 
 Получает JSON, содержащий поля для модели.
 
@@ -1063,7 +1063,7 @@ HOST: http://mir24.ru/api/v1
                 "last_edit_photo_by": "ultrices.a@nonjusto.ca"
             }
 
-### Изменить статью [PUT /article/update]
+### ✔ Изменить статью [PUT /article/update]
 
 Получает JSON, содержащий поля для модели.
 
@@ -1167,7 +1167,7 @@ HOST: http://mir24.ru/api/v1
 
 ##  Новости News [/news]
 
-### Поиск по новостям [POST /news/search]
+### ✔ Поиск по новостям [POST /news/search]
 
     Получает JSON. Если поля name/creator имеют значение true, то ведется поиск новости, содержащую строку (string) в этих полях и имеющую указанные поля (если их значения тоже true)
     
@@ -1926,7 +1926,7 @@ HOST: http://mir24.ru/api/v1
 
 ## Сюжеты Topic [/topic]
 
-### Получить сюжет по id [GET /topic/{model}]
+### ✔ Получить сюжет по id [GET /topic/{model}]
 
 + Parameters
 
@@ -1942,7 +1942,7 @@ HOST: http://mir24.ru/api/v1
                 "publishTime": "01-01-2016 09:00"
             }
             
-### Поиск по заголовку [POST /topic/search]
+### ✔ Поиск по заголовку [POST /topic/search]
 
     Получает строку. Возвращает  активные/не удаленные сюжеты, содержащие строку в заголовке
 
@@ -1962,7 +1962,7 @@ HOST: http://mir24.ru/api/v1
                 "deleted": false
             }
 
-### Получить массив сюжетов [GET /topic/{limit}/{offset}]
+### ✔ Получить массив сюжетов [GET /topic/{limit}/{offset}]
 
 + Parameters
 
@@ -2045,7 +2045,7 @@ HOST: http://mir24.ru/api/v1
                 }
             }
 
-### Создать сюжет [POST /topic/add]
+### ✔ Создать сюжет [POST /topic/add]
 
 Получает JSON, содержащий поля для модели.
 
@@ -2076,7 +2076,7 @@ HOST: http://mir24.ru/api/v1
                 "deleted": false
             }
 
-### Изменить сюжет [PUT /topic/update]
+### ✔ Изменить сюжет [PUT /topic/update]
 
 Получает JSON, содержащий поля для модели.
 
