@@ -2256,3 +2256,23 @@ HOST: http://mir24.ru/api/v1
                 "text": "Новости хуже Вы еще не встречали",
                 "publishTime": "01-01-2016 09:00"
             }
+            
+
+## Источники Sources [/sources]
+
+### Получить источники к статье, новости, фотоленте и видеосюжету [GET /sources/all]
+
+Возвращает ассоциативный массив источников
+
++ Response 200 (application/json)
+        
+        {
+            "1": {
+                    href: "www.google.com",
+                    name: "Google"
+                },
+            "2": {
+                    href: "www.yandex.ru",
+                    name: "Yandex"
+                }
+        }
