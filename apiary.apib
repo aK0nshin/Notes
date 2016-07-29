@@ -2183,64 +2183,6 @@ HOST: http://mir24.ru/api/v1
             ]
         ]
 
-### Создать врезку [POST /incut/add]
-
-Получает JSON, содержащий поля для модели.
-
-+ Request (application/json)
-
-        {
-            "title": "Самая лучшая новость",
-            "text": "Новости лучше Вы еще не встречали",
-            "publishTime": "01-01-2016 09:00"
-        }
-
-+ Response 201 (application/json)
-
-    + Headers
-
-            Location: /incut/12
-
-    + Body
-
-            {
-                "id": "12",
-                "createdAt": "31-12-2015 09:00",
-                "title": "Самая лучшая новость",
-                "text": "Новости лучше Вы еще не встречали",
-                "publishTime": "01-01-2016 09:00"
-            }
-
-### Изменить врезку [PUT /incut/update]
-
-Получает JSON, содержащий поля для модели.
-
-+ Request (application/json)
-
-        {
-            "id": "12",
-            "title": "Самая худшая новость",
-            "text": "Новости хуже Вы еще не встречали",
-            "publishTime": "01-01-2016 09:00"
-        }
-
-+ Response 201 (application/json)
-
-    + Headers
-
-            Location: /incut/12
-
-    + Body
-
-            {
-                "id": "12",
-                "createdAt": "31-12-2015 09:00",
-                "title": "Самая худшая новость",
-                "text": "Новости хуже Вы еще не встречали",
-                "publishTime": "01-01-2016 09:00"
-            }
-            
-
 ## Источники Sources [/sources]
 
 ### Получить источники к статье, новости, фотоленте и видеосюжету [GET /sources/all]
