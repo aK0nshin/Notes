@@ -234,154 +234,7 @@ HOST: http://mir24.ru/api/v1
             }
         }
           
-### Получить сетку главной страницы [GET /grids/main]
 
-Возвращает ассоциативный массив сетки страницы.
-
-+ Response 200 (application/json)
-
-           {
-                        "1": [
-                            {
-                                "width": 0,
-                                "entity_id": 1,
-                                "entity_type": 'news',
-                                "full": false,
-                                "cover": true
-                            },
-                            {
-                                "width": 33,
-                                "entity_id": 2,
-                                "entity_type": 'news',
-                                "full": false,
-                                "cover": true
-
-                            },
-                            {
-                                "width": 33,
-                                "entity_id": 3,
-                                "entity_type": 'news',
-                                "full": false,
-                                "cover": true
-                            },
-                            {
-                                "width": 33,
-                                "entity_id": 4,
-                                "entity_type": 'news',
-                                "full": false,
-                                "cover": true
-                            }
-                        ],
-                        "2": [
-                            {
-                                "width": 0,
-                                "entity_id": 5,
-                                "entity_type": 'news',
-                                "full": false,
-                                "cover": true
-                            },
-                            {
-                                "width": 0,
-                                "entity_id": 6,
-                                "entity_type": 'news',
-                                "full": false,
-                                "cover": true
-                            },
-                            {
-                                "width": 50,
-                                "entity_id": 7,
-                                "entity_type": 'galleries',
-                                "full": false,
-                                "cover": true
-
-                            },
-                            {
-                                "width": 50,
-                                "entity_id": 8,
-                                "entity_type": 'video_articles',
-                                "full": false,
-                                "cover": true
-                            }
-                        ]
-                    }
-          
-### Сохранить сетку главной страницы [POST /grids/main]
-
-Сохранияет новую сетку страницы.
-
-+ Request (application/json)
-
-           {
-                        "1": [
-                            {
-                                "width": 0,
-                                "entity_id": 1,
-                                "entity_type": 'news',
-                                "full": false,
-                                "cover": true
-                            },
-                            {
-                                "width": 33,
-                                "entity_id": 2,
-                                "entity_type": 'news',
-                                "full": false,
-                                "cover": true
-
-                            },
-                            {
-                                "width": 33,
-                                "entity_id": 3,
-                                "entity_type": 'news',
-                                "full": false,
-                                "cover": true
-                            },
-                            {
-                                "width": 33,
-                                "entity_id": 4,
-                                "entity_type": 'news',
-                                "full": false,
-                                "cover": true
-                            }
-                        ],
-                        "2": [
-                            {
-                                "width": 0,
-                                "entity_id": 5,
-                                "entity_type": 'news',
-                                "full": false,
-                                "cover": true
-                            },
-                            {
-                                "width": 0,
-                                "entity_id": 6,
-                                "entity_type": 'news',
-                                "full": false,
-                                "cover": true
-                            },
-                            {
-                                "width": 50,
-                                "entity_id": 7,
-                                "entity_type": 'galleries',
-                                "full": false,
-                                "cover": true
-
-                            },
-                            {
-                                "width": 50,
-                                "entity_id": 8,
-                                "entity_type": 'video_articles',
-                                "full": false,
-                                "cover": true
-                            }
-                        ]
-                    }
-+ Response 200 (application/json)
-
-            {
-                "saved": true
-            }
-
-                    
 ### ✔ Поиск по связанным сюжетам [POST /relatedTopics/search]
 
 Принимает строку. Возвращает ассоциативный массив сюжетов, в title которых входит принятая подстрока.
@@ -2119,7 +1972,7 @@ HOST: http://mir24.ru/api/v1
 + Response 200 (application/json)
 
             {
-                "data": [
+                "data": {
                     "1": {
                                 "id": "1",
                                 "title": "Визит Путина в Китай",
@@ -2184,7 +2037,7 @@ HOST: http://mir24.ru/api/v1
                                 "updated": 1467280326861,
                                 "deleted": true
                             }
-                ],
+                },
                 "meta": {
                     "count": "3",
                     "moreAhead": "false",
@@ -2348,3 +2201,152 @@ HOST: http://mir24.ru/api/v1
                     name: "Yandex"
                 }
         }
+
+## Сетки Grids [/grids]
+
+### Получить сетку главной страницы [GET /grids/main]
+
+Возвращает ассоциативный массив сетки страницы.
+
++ Response 200 (application/json)
+
+           {
+                        "1": [
+                            {
+                                "width": 0,
+                                "entity_id": 1,
+                                "entity_type": 'news',
+                                "full": false,
+                                "cover": true
+                            },
+                            {
+                                "width": 33,
+                                "entity_id": 2,
+                                "entity_type": 'news',
+                                "full": false,
+                                "cover": true
+
+                            },
+                            {
+                                "width": 33,
+                                "entity_id": 3,
+                                "entity_type": 'news',
+                                "full": false,
+                                "cover": true
+                            },
+                            {
+                                "width": 33,
+                                "entity_id": 4,
+                                "entity_type": 'news',
+                                "full": false,
+                                "cover": true
+                            }
+                        ],
+                        "2": [
+                            {
+                                "width": 0,
+                                "entity_id": 5,
+                                "entity_type": 'news',
+                                "full": false,
+                                "cover": true
+                            },
+                            {
+                                "width": 0,
+                                "entity_id": 6,
+                                "entity_type": 'news',
+                                "full": false,
+                                "cover": true
+                            },
+                            {
+                                "width": 50,
+                                "entity_id": 7,
+                                "entity_type": 'galleries',
+                                "full": false,
+                                "cover": true
+
+                            },
+                            {
+                                "width": 50,
+                                "entity_id": 8,
+                                "entity_type": 'video_articles',
+                                "full": false,
+                                "cover": true
+                            }
+                        ]
+                    }
+          
+### Сохранить сетку главной страницы [POST /grids/main]
+
+Сохранияет новую сетку страницы.
+
++ Request (application/json)
+
+           {
+                        "1": [
+                            {
+                                "width": 0,
+                                "entity_id": 1,
+                                "entity_type": 'news',
+                                "full": false,
+                                "cover": true
+                            },
+                            {
+                                "width": 33,
+                                "entity_id": 2,
+                                "entity_type": 'news',
+                                "full": false,
+                                "cover": true
+
+                            },
+                            {
+                                "width": 33,
+                                "entity_id": 3,
+                                "entity_type": 'news',
+                                "full": false,
+                                "cover": true
+                            },
+                            {
+                                "width": 33,
+                                "entity_id": 4,
+                                "entity_type": 'news',
+                                "full": false,
+                                "cover": true
+                            }
+                        ],
+                        "2": [
+                            {
+                                "width": 0,
+                                "entity_id": 5,
+                                "entity_type": 'news',
+                                "full": false,
+                                "cover": true
+                            },
+                            {
+                                "width": 0,
+                                "entity_id": 6,
+                                "entity_type": 'news',
+                                "full": false,
+                                "cover": true
+                            },
+                            {
+                                "width": 50,
+                                "entity_id": 7,
+                                "entity_type": 'galleries',
+                                "full": false,
+                                "cover": true
+
+                            },
+                            {
+                                "width": 50,
+                                "entity_id": 8,
+                                "entity_type": 'video_articles',
+                                "full": false,
+                                "cover": true
+                            }
+                        ]
+                    }
++ Response 200 (application/json)
+
+            {
+                "saved": true
+            }
