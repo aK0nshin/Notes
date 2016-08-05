@@ -2107,7 +2107,109 @@ HOST: http://mir24.ru/api/v1
                 "updated": 1467280326861,
                 "deleted": false
             }
+            
+## Баннеры Banners [/banners]
 
+### Получить массив баннеров [GET /banners/{limit}/{offset}]
+
++ Parameters
+    + limit: 10 (number) - Лимит баннеров
+    + offset: 0 (number) - Смещение баннеров
+
++ Response 200 (application/json)
+            
+            {
+            "1":{
+                id: 1,
+                code: "<div>Я имею очень высокий приоритет баннер</div>",
+                start_date: "03-03-2003",
+                end_date: "04-04-2004",
+                priority: 5,
+                deleted: false,
+            },
+            "2":{
+                id: 2,
+                code: "<div>Я имею высокий приоритет баннер</div>",
+                start_date: "03-03-2003",
+                end_date: "04-04-2004",
+                priority: 4,
+                deleted: false,
+            },
+            "3":{
+                id: 3,
+                code: "<div>Я имею очень низкий приоритет баннер</div>",
+                start_date: "03-03-2003",
+                end_date: "04-04-2004",
+                priority: 1,
+                deleted: false,
+            },
+            "4":{
+             id: 4,
+             code: "<div>Я имею средний приоритет баннер</div>",
+                start_date: "03-03-2003",
+                end_date: "04-04-2004",
+                priority: 3,
+                deleted: false,
+            },
+        }  
+
+### Создать баннер [POST /banners/update]
+
++ Request (application/json)
+
+        {
+            id: 2,
+                code: "<div>Я имею высокий приоритет баннер</div>",
+                start_date: "03-03-2003",
+                end_date: "04-04-2004",
+                priority: 4,
+                deleted: false,
+        }
+
++ Response 200 (application/json)
+
+    + Headers
+        
+            Location: /banners/2
+    
+    + Body
+        
+            {
+                "success": {
+                    "id": "2"
+                    }
+            }
+
+### Изменить баннер [PUT /banners/update]
+
++ Request (application/json)
+            
+            {
+                code: "<div>Я измененный баннер</div>",
+                start_date: "03-03-2003",
+                end_date: "04-04-2004",
+                priority: 3,
+                deleted: false,
+            }
+            
++ Response 201 (application/json)
+            
+    + Headers
+            
+            Location: /topic/12
+
+    + Body
+
+            {
+            "success": {
+                "id": "4"
+            },
+            "error": {
+                "state": 'error state',
+                "message": 'error message'
+            }
+            }
+            
 ## Врезки Incut [/incut]
 
 ### Получить врезку по id [GET /incut/{id}]
@@ -2204,9 +2306,15 @@ HOST: http://mir24.ru/api/v1
 
 ## Сетки Grids [/grids]
 
-### Получить сетку главной страницы [GET /grids/main]
+### Получить сетку главной страницы [GET /grids/{modelName}]
 
 Возвращает ассоциативный массив сетки страницы.
+
++ Parameters
+
+    + modelName: "main" (string) - имя модели
+
+
 
 + Response 200 (application/json)
 
@@ -2275,9 +2383,15 @@ HOST: http://mir24.ru/api/v1
                         ]
                     }
           
-### Сохранить сетку главной страницы [POST /grids/main]
+### Сохранить сетку главной страницы [POST /grids/{modelName}]
 
 Сохранияет новую сетку страницы.
+
++ Parameters
+
+    + modelName: "main" (string) - имя модели
+
+
 
 + Request (application/json)
 
