@@ -175,7 +175,7 @@ HOST: http://mir24.ru/api/v1
                 }
             }
 
-### Поиск по связанным материалам: новости, статьи, фотоленты, видеосюжеты [POST /relatedMaterials/search]
+### ✔ Поиск по связанным материалам: новости, статьи, фотоленты, видеосюжеты [POST /relatedMaterials/search]
 
 Принимает строку. Возвращает ассоциативный массив новостей, сюжетов, статей, фотолент и видеосюжетов, в title которых входит принятая подстрока.
 
@@ -2153,7 +2153,7 @@ HOST: http://mir24.ru/api/v1
             },
         }  
 
-### Создать баннер [POST /banners/update]
+### Создать баннер [POST /banners/add]
 
 + Request (application/json)
 
@@ -2318,70 +2318,78 @@ HOST: http://mir24.ru/api/v1
 
 + Response 200 (application/json)
 
-           {
-                        "1": [
-                            {
-                                "width": 0,
-                                "entity_id": 1,
-                                "entity_type": 'news',
-                                "full": false,
-                                "cover": true
-                            },
-                            {
-                                "width": 33,
-                                "entity_id": 2,
-                                "entity_type": 'news',
-                                "full": false,
-                                "cover": true
+           [
+                        {
+                            cells: [
+                                {
+                                    "width": 0,
+                                    "entity_id": 1,
+                                    "entity_type": 'news',
+                                    "style": 'default',
+                                    "cover": true
+                                },
+                                {
+                                    "width": 33,
+                                    "entity_id": 2,
+                                    "entity_type": 'news',
+                                    "style": 'default',
+                                    "cover": true
+                                },
+                                {
+                                    "width": 33,
+                                    "entity_id": 3,
+                                    "entity_type": 'news',
+                                    "style": 'default',
+                                    "cover": true
+                                },
+                                {
+                                    "width": 33,
+                                    "entity_id": 4,
+                                    "entity_type": 'news',
+                                    "style": 'default',
+                                    "cover": true
+                                }
+                            ], props: {
+                            line: false
+                        }
+                        },
+                        {
+                            cells: [
+                                {
+                                    "width": 0,
+                                    "entity_id": 5,
+                                    "entity_type": 'news',
+                                    "style": 'default',
+                                    "cover": true
+                                },
+                                {
+                                    "width": 0,
+                                    "entity_id": 6,
+                                    "entity_type": 'news',
+                                    "style": 'default',
+                                    "cover": true
+                                },
+                                {
+                                    "width": 50,
+                                    "entity_id": 7,
+                                    "entity_type": 'galleries',
+                                    "style": 'default',
+                                    "cover": true
 
-                            },
-                            {
-                                "width": 33,
-                                "entity_id": 3,
-                                "entity_type": 'news',
-                                "full": false,
-                                "cover": true
-                            },
-                            {
-                                "width": 33,
-                                "entity_id": 4,
-                                "entity_type": 'news',
-                                "full": false,
-                                "cover": true
+                                },
+                                {
+                                    "width": 50,
+                                    "entity_id": 8,
+                                    "entity_type": 'video_articles',
+                                    "style": 'default',
+                                    "cover": true
+                                }
+                            ],
+                            props: {
+                                line: false
                             }
-                        ],
-                        "2": [
-                            {
-                                "width": 0,
-                                "entity_id": 5,
-                                "entity_type": 'news',
-                                "full": false,
-                                "cover": true
-                            },
-                            {
-                                "width": 0,
-                                "entity_id": 6,
-                                "entity_type": 'news',
-                                "full": false,
-                                "cover": true
-                            },
-                            {
-                                "width": 50,
-                                "entity_id": 7,
-                                "entity_type": 'galleries',
-                                "full": false,
-                                "cover": true
-
-                            },
-                            {
-                                "width": 50,
-                                "entity_id": 8,
-                                "entity_type": 'video_articles',
-                                "full": false,
-                                "cover": true
-                            }
-                        ]
-                    }
+                        }
+                    ]
           
 ### Сохранить сетку главной страницы [POST /grids/{modelName}]
 
@@ -2395,70 +2403,78 @@ HOST: http://mir24.ru/api/v1
 
 + Request (application/json)
 
-           {
-                        "1": [
-                            {
-                                "width": 0,
-                                "entity_id": 1,
-                                "entity_type": 'news',
-                                "full": false,
-                                "cover": true
-                            },
-                            {
-                                "width": 33,
-                                "entity_id": 2,
-                                "entity_type": 'news',
-                                "full": false,
-                                "cover": true
+           [
+                        {
+                            cells: [
+                                {
+                                    "width": 0,
+                                    "entity_id": 1,
+                                    "entity_type": 'news',
+                                    "style": 'default',
+                                    "cover": true
+                                },
+                                {
+                                    "width": 33,
+                                    "entity_id": 2,
+                                    "entity_type": 'news',
+                                    "style": 'default',
+                                    "cover": true
+                                },
+                                {
+                                    "width": 33,
+                                    "entity_id": 3,
+                                    "entity_type": 'news',
+                                    "style": 'default',
+                                    "cover": true
+                                },
+                                {
+                                    "width": 33,
+                                    "entity_id": 4,
+                                    "entity_type": 'news',
+                                    "style": 'default',
+                                    "cover": true
+                                }
+                            ], props: {
+                            line: false
+                        }
+                        },
+                        {
+                            cells: [
+                                {
+                                    "width": 0,
+                                    "entity_id": 5,
+                                    "entity_type": 'news',
+                                    "style": 'default',
+                                    "cover": true
+                                },
+                                {
+                                    "width": 0,
+                                    "entity_id": 6,
+                                    "entity_type": 'news',
+                                    "style": 'default',
+                                    "cover": true
+                                },
+                                {
+                                    "width": 50,
+                                    "entity_id": 7,
+                                    "entity_type": 'galleries',
+                                    "style": 'default',
+                                    "cover": true
 
-                            },
-                            {
-                                "width": 33,
-                                "entity_id": 3,
-                                "entity_type": 'news',
-                                "full": false,
-                                "cover": true
-                            },
-                            {
-                                "width": 33,
-                                "entity_id": 4,
-                                "entity_type": 'news',
-                                "full": false,
-                                "cover": true
+                                },
+                                {
+                                    "width": 50,
+                                    "entity_id": 8,
+                                    "entity_type": 'video_articles',
+                                    "style": 'default',
+                                    "cover": true
+                                }
+                            ],
+                            props: {
+                                line: false
                             }
-                        ],
-                        "2": [
-                            {
-                                "width": 0,
-                                "entity_id": 5,
-                                "entity_type": 'news',
-                                "full": false,
-                                "cover": true
-                            },
-                            {
-                                "width": 0,
-                                "entity_id": 6,
-                                "entity_type": 'news',
-                                "full": false,
-                                "cover": true
-                            },
-                            {
-                                "width": 50,
-                                "entity_id": 7,
-                                "entity_type": 'galleries',
-                                "full": false,
-                                "cover": true
-
-                            },
-                            {
-                                "width": 50,
-                                "entity_id": 8,
-                                "entity_type": 'video_articles',
-                                "full": false,
-                                "cover": true
-                            }
-                        ]
-                    }
+                        }
+                    ]
 + Response 200 (application/json)
 
             {
