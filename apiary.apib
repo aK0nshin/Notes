@@ -5,7 +5,7 @@ HOST: http://mir24.ru/api/v1
 
 Документация к  апи сервера мир24.
 
-## Общие [/]
+## ✔ Общие [/]
 
 ### ✔ Получить массив дополнительной информации [POST /additions]
 
@@ -275,7 +275,7 @@ HOST: http://mir24.ru/api/v1
                 "Job": "is done"
             }
 
-## Все модели All [/all]
+## ✔ Все модели All [/all]
 
 ### ✔ Получить ассоциативные массивы запрошенных  сущностей [POST /all/mass]
 
@@ -688,7 +688,7 @@ HOST: http://mir24.ru/api/v1
                 }
             }
 
-## Статья Article [/article]
+## ✔ Статья Article [/article]
 
 ### ✔ Поиск по статьям [POST /articles/search]
 
@@ -1165,7 +1165,7 @@ HOST: http://mir24.ru/api/v1
                 "last_edit_photo_by": "ultrices.a@nonjusto.ca"
             }
 
-##  Новости News [/news]
+## ✔ Новости News [/news]
 
 ### ✔ Поиск по новостям [POST /news/search]
 
@@ -1924,7 +1924,7 @@ HOST: http://mir24.ru/api/v1
                    "last_edit_photo_by": "ultrices.a@nonjusto.ca"
                 }
 
-## Сюжеты Topic [/topic]
+## ✔ Сюжеты Topic [/topic]
 
 ### ✔ Получить сюжет по id [GET /topic/{model}]
 
@@ -2108,9 +2108,9 @@ HOST: http://mir24.ru/api/v1
                 "deleted": false
             }
             
-## Баннеры Banners [/banners]
+## ✔ Баннеры Banners [/banners]
 
-### Получить массив баннеров [GET /banners/{limit}/{offset}]
+### ✔ Получить массив баннеров [GET /banners/{limit}/{offset}]
 
 + Parameters
     + limit: 10 (number) - Лимит баннеров
@@ -2153,7 +2153,7 @@ HOST: http://mir24.ru/api/v1
             },
         }  
 
-### Создать баннер [POST /banners/add]
+### ✔ Создать баннер [POST /banners/add]
 
 + Request (application/json)
 
@@ -2179,7 +2179,7 @@ HOST: http://mir24.ru/api/v1
                     }
             }
 
-### Изменить баннер [PUT /banners/update]
+### ✔ Изменить баннер [PUT /banners/update]
 
 + Request (application/json)
             
@@ -2210,7 +2210,7 @@ HOST: http://mir24.ru/api/v1
             }
             }
             
-## Врезки Incut [/incut]
+## ✔ Врезки Incut [/incut]
 
 ### ✔ Получить врезку по id [GET /incut/{id}]
 
@@ -2285,7 +2285,7 @@ HOST: http://mir24.ru/api/v1
             ]
         ]
 
-## Источники Sources [/sources]
+## ✔ Источники Sources [/sources]
 
 ### ✔ Получить источники к статье, новости, фотоленте и видеосюжету [GET /sources/all]
 
