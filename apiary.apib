@@ -815,6 +815,23 @@ HOST: http://mir24.ru/api/v1
                "last_edit_photo_by": "ultrices.a@nonjusto.ca"
             }
 
+### Проверить занятость статьи [GET /article/{id}/editor/]
+
+Возвращает значение поля cur_editor статьи и ФИ по этому значению. Если оно пусто - возвращает null
+
++ Parameters
+
+    + id: 3 (number) - id  статьи
+
++ Response 200 (application/json)
+
+        {
+            id: 13,
+            name: "Саша Коншин"
+        }
+
+
+
 ### ✔ Получить массив статей [GET /article/{limit}/{offset}]
 
 + Parameters
@@ -1165,7 +1182,7 @@ HOST: http://mir24.ru/api/v1
                 "last_edit_photo_by": "ultrices.a@nonjusto.ca"
             }
 
-## ✔ Новости News [/news]
+## Новости News [/news]
 
 ### ✔ Поиск по новостям [POST /news/search]
 
@@ -1239,6 +1256,21 @@ HOST: http://mir24.ru/api/v1
                "last_edit_video_by": "ultrices.a@nonjusto.ca",
                "last_edit_photo_by": "ultrices.a@nonjusto.ca"
             }
+
+### Проверить занятость новости [GET /news/{id}/editor/]
+
+Возвращает значение поля cur_editor новости и ФИ по этому значению. Если оно пусто - возвращает null
+
++ Parameters
+
+    + id: 3 (number) - id  новости
+
++ Response 200 (application/json)
+
+        {
+            id: 12,
+            name: "Лев Толстой"
+        }
 
 
 ### ✔ Получить новость по id [GET /news/{id}]
