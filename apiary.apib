@@ -2084,7 +2084,65 @@ HOST: http://mir24.ru/api/v1
                    "last_edit_video_by": "ultrices.a@nonjusto.ca",
                    "last_edit_photo_by": "ultrices.a@nonjusto.ca"
                 }
+                
+### Отправить картинки [POST /news/saveFiles]
 
++ Request (multipart/form-data; boundary=------WebKitFormBoundaryh3SgKjplOFCAvWgK)
+    
+        ------WebKitFormBoundaryh3SgKjplOFCAvWgK
+        Content-Disposition: form-data; name="photoshop.png"; filename="photoshop.png"
+        Content-Type: image/png
+
+
+        ------WebKitFormBoundaryh3SgKjplOFCAvWgK
+    
+        Content-Disposition: form-data; name="title"
+
+        Встреча Путина с Обамой
+        ------WebKitFormBoundaryh3SgKjplOFCAvWgK
+        Content-Disposition: form-data; name="alt"
+
+        Встреча Путина с Обамой
+        ------WebKitFormBoundaryh3SgKjplOFCAvWgK
+        Content-Disposition: form-data; name="copyright_author"
+    
+        Пономарев Андрей
+        ------WebKitFormBoundaryh3SgKjplOFCAvWgK
+        Content-Disposition: form-data; name="copyright_origin"
+
+        Интерфакс
+        ------WebKitFormBoundaryh3SgKjplOFCAvWgK
+        Content-Disposition: form-data; name="copyright_link"
+    
+        ya.ru
+        ------WebKitFormBoundaryh3SgKjplOFCAvWgK
+        Content-Disposition: form-data; name="main"
+    
+        false
+        ------WebKitFormBoundaryh3SgKjplOFCAvWgK--
+
+       
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /news/12
+
+    + Body
+            
+            "images":[
+                [
+                    href: 'https://www.mir24.ru/gde-tam-legit-kartinka/img1'
+                    title: "Встреча Путина с Обамой",
+                    alt: "Встреча Путина с Обамой",
+                    copyright_author: "Пономарев Андрей"
+                    copyright_origin: "Интерфакс"
+                    copyright_link: "ya.ru"
+                    main: false
+                ]
+            ]
+        
 ## ✔ Сюжеты Topic [/topic]
 
 ### ✔ Получить сюжет по id [GET /topic/{model}]
