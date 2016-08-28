@@ -175,7 +175,7 @@ HOST: http://mir24.ru/api/v1
                 }
             }
 
-### ✔ Поиск по связанным материалам: новости, статьи, фотоленты, видеосюжеты [POST /relatedMaterials/search]
+### Поиск по связанным материалам: новости, статьи, фотоленты, видеосюжеты [POST /relatedMaterials/search]
 
 Принимает строку. Возвращает ассоциативный массив новостей, сюжетов, статей, фотолент и видеосюжетов, в title которых входит принятая подстрока.
 
@@ -236,7 +236,7 @@ HOST: http://mir24.ru/api/v1
         }
           
 
-### ✔ Поиск по связанным сюжетам [POST /relatedTopics/search]
+### Поиск по связанным сюжетам [POST /relatedTopics/search]
 
 Принимает строку. Возвращает ассоциативный массив сюжетов, в title которых входит принятая подстрока.
 
@@ -260,7 +260,7 @@ HOST: http://mir24.ru/api/v1
             }
         }
           
-### ✔ Удалить модель [PUT /deleteHardCautionDontTouchThis]
+### Удалить модель [PUT /deleteHardCautionDontTouchThis]
 
 Принимает название модели и id записи, кроторую надо удалить.
 
@@ -276,9 +276,9 @@ HOST: http://mir24.ru/api/v1
                 "Job": "is done"
             }
 
-## ✔ Все модели All [/all]
+## Все модели All [/all]
 
-### ✔ Получить ассоциативные массивы запрошенных  сущностей [POST /all/mass]
+### Получить ассоциативные массивы запрошенных  сущностей [POST /all/mass]
 
 Принимает ассоциативный массив. Ключи - имена сущностей. Значения - массивы id.
 
@@ -698,9 +698,9 @@ HOST: http://mir24.ru/api/v1
                 }
             }
 
-## ✔ Статья Article [/article]
+## Статья Article [/article]
 
-### ✔ Поиск по статьям [POST /articles/search]
+### Поиск по статьям [POST /articles/search]
 
     Получает JSON. Если поля name/creator имеют значение true, то ведется поиск статьи, содержащую строку (string) в этих полях и имеющую указанные поля (если их значения тоже true)
     
@@ -774,7 +774,7 @@ HOST: http://mir24.ru/api/v1
                "last_edit_photo_by": "ultrices.a@nonjusto.ca"
             }
 
-### ✔ Получить статью по id [GET /article/{id}]
+### Получить статью по id [GET /article/{id}]
 
 + Parameters
 
@@ -844,7 +844,7 @@ HOST: http://mir24.ru/api/v1
 
 
 
-### ✔ Получить массив статей [GET /article/{limit}/{offset}]
+### Получить массив статей [GET /article/{limit}/{offset}]
 
 + Parameters
 
@@ -995,7 +995,7 @@ HOST: http://mir24.ru/api/v1
                 }
             }
 
-### ✔ Создать статью [POST /article/add]
+### Создать статью [POST /article/add]
 
 Получает JSON, содержащий поля для модели.
 
@@ -1097,7 +1097,7 @@ HOST: http://mir24.ru/api/v1
                 "last_edit_photo_by": "ultrices.a@nonjusto.ca"
             }
 
-### ✔ Изменить статью [PUT /article/update]
+### Изменить статью [PUT /article/update]
 
 Получает JSON, содержащий поля для модели.
 
@@ -1203,7 +1203,7 @@ HOST: http://mir24.ru/api/v1
 
 ## Новости News [/news]
 
-### ✔ Поиск по новостям [POST /news/search]
+### Поиск по новостям [POST /news/search]
 
     Получает JSON. Если поля name/creator имеют значение true, то ведется поиск новости, содержащую строку (string) в этих полях и имеющую указанные поля (если их значения тоже true)
     
@@ -1279,7 +1279,7 @@ HOST: http://mir24.ru/api/v1
                "last_edit_photo_by": "ultrices.a@nonjusto.ca"
             }
             
-### ✔ Поиск по новостям с лимитом и смещением [POST /news/search/{limit}/{offset}]
+### Поиск по новостям с лимитом и смещением [POST /news/search/{limit}/{offset}]
 
     Получает JSON. Если поля name/creator имеют значение true, то ведется поиск новости, содержащую строку (string) в этих полях и имеющую указанные поля (если их значения тоже true)
 
@@ -1384,7 +1384,7 @@ HOST: http://mir24.ru/api/v1
         }
 
 
-### ✔ Получить новость по id [GET /news/{id}]
+### Получить новость по id [GET /news/{id}]
 
 + Parameters
 
@@ -1439,7 +1439,7 @@ HOST: http://mir24.ru/api/v1
                "last_edit_photo_by": "ultrices.a@nonjusto.ca"
             }
 
-### ✔ Получить новости по массиву id [POST /news/mass]
+### Получить новости по массиву id [POST /news/mass]
 
 Принимает массив id новостей возвращает ассоциативный массив новостей с соответствующими id
 
@@ -1504,7 +1504,7 @@ HOST: http://mir24.ru/api/v1
             }
           }
 
-### ✔ Получить ассоциативный массив новостей [GET /news/{limit}/{offset}]
+### Получить ассоциативный массив новостей [GET /news/{limit}/{offset}]
 
 + Parameters
 
@@ -1659,7 +1659,7 @@ HOST: http://mir24.ru/api/v1
                 }
             }
 
-### ✔ Создать новость [POST /news/add]
+### Создать новость [POST /news/add]
 
 Получает JSON, содержащий поля для модели.
 
@@ -1772,7 +1772,7 @@ HOST: http://mir24.ru/api/v1
                 }
             }
             
-### ✔ Создать новость со связанными моделями [POST /news/add/related]
+### Создать новость со связанными моделями [POST /news/add/related]
 
 Получает JSON, содержащий поля для модели.
 
@@ -1878,7 +1878,7 @@ HOST: http://mir24.ru/api/v1
                    "last_edit_photo_by": "ultrices.a@nonjusto.ca"
             }
 
-### ✔ Изменить новость [PUT /news/update]
+### Изменить новость [PUT /news/update]
 
 Получает JSON, содержащий поля для модели.
 
@@ -1949,7 +1949,7 @@ HOST: http://mir24.ru/api/v1
                     }
                 }
 
-### ✔ Изменить новость со связанными моделями [PUT /news/update/related]
+### Изменить новость со связанными моделями [PUT /news/update/related]
 
 Получает JSON, содержащий поля для модели.
 
@@ -2115,9 +2115,9 @@ HOST: http://mir24.ru/api/v1
                 ]
             ]
         
-## ✔ Сюжеты Topic [/topic]
+## Сюжеты Topic [/topic]
 
-### ✔ Получить сюжет по id [GET /topic/{model}]
+### Получить сюжет по id [GET /topic/{model}]
 
 + Parameters
 
@@ -2133,7 +2133,7 @@ HOST: http://mir24.ru/api/v1
                 "publishTime": "01-01-2016 09:00"
             }
             
-### ✔ Поиск по заголовку [POST /topics/search]
+### Поиск по заголовку [POST /topics/search]
 
     Получает строку. Возвращает  активные/не удаленные сюжеты, содержащие строку в заголовке
 
@@ -2153,7 +2153,7 @@ HOST: http://mir24.ru/api/v1
                 "deleted": false
             }
 
-### ✔ Получить массив сюжетов [GET /topics/{limit}/{offset}]
+### Получить массив сюжетов [GET /topics/{limit}/{offset}]
 
 + Parameters
 
@@ -2236,7 +2236,7 @@ HOST: http://mir24.ru/api/v1
                 }
             }
 
-### ✔ Создать сюжет [POST /topic/add]
+### Создать сюжет [POST /topic/add]
 
 Получает JSON, содержащий поля для модели.
 
@@ -2267,7 +2267,7 @@ HOST: http://mir24.ru/api/v1
                 "deleted": false
             }
 
-### ✔ Изменить сюжет [PUT /topic/update]
+### Изменить сюжет [PUT /topic/update]
 
 Получает JSON, содержащий поля для модели.
 
@@ -2299,9 +2299,9 @@ HOST: http://mir24.ru/api/v1
                 "deleted": false
             }
             
-## ✔ Баннеры Banners [/banners]
+## Баннеры Banners [/banners]
 
-### ✔ Получить массив баннеров [GET /banners/{limit}/{offset}]
+### Получить массив баннеров [GET /banners/{limit}/{offset}]
 
 + Parameters
     + limit: 10 (number) - Лимит баннеров
@@ -2344,7 +2344,7 @@ HOST: http://mir24.ru/api/v1
             },
         }  
 
-### ✔ Создать баннер [POST /banners/add]
+### Создать баннер [POST /banners/add]
 
 + Request (application/json)
 
@@ -2370,7 +2370,7 @@ HOST: http://mir24.ru/api/v1
                     }
             }
 
-### ✔ Изменить баннер [PUT /banners/update]
+### Изменить баннер [PUT /banners/update]
 
 + Request (application/json)
             
@@ -2401,9 +2401,9 @@ HOST: http://mir24.ru/api/v1
             }
             }
             
-## ✔ Врезки Incut [/incut]
+## Врезки Incut [/incut]
 
-### ✔ Получить врезку по id [GET /incut/{id}]
+### Получить врезку по id [GET /incut/{id}]
 
 + Parameters
 
@@ -2419,7 +2419,7 @@ HOST: http://mir24.ru/api/v1
                 "publishTime": "01-01-2016 09:00"
             }
 
-### ✔ Получить массив врезок [GET /incut/{limit}/{offset}]
+### Получить массив врезок [GET /incut/{limit}/{offset}]
 
 + Parameters
 
@@ -2459,7 +2459,7 @@ HOST: http://mir24.ru/api/v1
                 }
             }
             
-### ✔ Получить врезки к статье, новости, фотоленте и видеосюжету [GET /incuts/all]
+### Получить врезки к статье, новости, фотоленте и видеосюжету [GET /incuts/all]
 
 Возвращает массив существующих врезок
 
@@ -2476,9 +2476,9 @@ HOST: http://mir24.ru/api/v1
             ]
         ]
 
-## ✔ Источники Sources [/sources]
+## Источники Sources [/sources]
 
-### ✔ Получить источники к статье, новости, фотоленте и видеосюжету [GET /sources/all]
+### Получить источники к статье, новости, фотоленте и видеосюжету [GET /sources/all]
 
 Возвращает ассоциативный массив источников
 
@@ -2495,9 +2495,9 @@ HOST: http://mir24.ru/api/v1
                 }
         }
 
-## ✔ Сетки Grids [/grids]
+## Сетки Grids [/grids]
 
-### ✔ Получить сетку главной страницы [GET /grids/{modelName}]
+### Получить сетку главной страницы [GET /grids/{modelName}]
 
 Возвращает ассоциативный массив сетки страницы.
 
@@ -2582,7 +2582,7 @@ HOST: http://mir24.ru/api/v1
                         }
                     ]
           
-### ✔ Сохранить сетку главной страницы [POST /grids/{modelName}]
+### reseСохранить сетку главной страницы [POST /grids/{modelName}]
 
 Сохранияет новую сетку страницы.
 
