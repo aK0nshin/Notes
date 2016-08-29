@@ -2056,65 +2056,7 @@ HOST: http://mir24.ru/api/v1
                    "last_edit_video_by": "ultrices.a@nonjusto.ca",
                    "last_edit_photo_by": "ultrices.a@nonjusto.ca"
                 }
-                
-### Отправить картинки [POST /news/saveFiles]
 
-+ Request (multipart/form-data; boundary=------WebKitFormBoundaryh3SgKjplOFCAvWgK)
-    
-        ------WebKitFormBoundaryh3SgKjplOFCAvWgK
-        Content-Disposition: form-data; name="photoshop.png"; filename="photoshop.png"
-        Content-Type: image/png
-
-
-        ------WebKitFormBoundaryh3SgKjplOFCAvWgK
-    
-        Content-Disposition: form-data; name="title"
-
-        Встреча Путина с Обамой
-        ------WebKitFormBoundaryh3SgKjplOFCAvWgK
-        Content-Disposition: form-data; name="alt"
-
-        Встреча Путина с Обамой
-        ------WebKitFormBoundaryh3SgKjplOFCAvWgK
-        Content-Disposition: form-data; name="copyright_author"
-    
-        Пономарев Андрей
-        ------WebKitFormBoundaryh3SgKjplOFCAvWgK
-        Content-Disposition: form-data; name="copyright_origin"
-
-        Интерфакс
-        ------WebKitFormBoundaryh3SgKjplOFCAvWgK
-        Content-Disposition: form-data; name="copyright_link"
-    
-        ya.ru
-        ------WebKitFormBoundaryh3SgKjplOFCAvWgK
-        Content-Disposition: form-data; name="main"
-    
-        false
-        ------WebKitFormBoundaryh3SgKjplOFCAvWgK--
-
-       
-
-+ Response 201 (application/json)
-
-    + Headers
-
-            Location: /news/12
-
-    + Body
-            
-            "images":[
-                [
-                    src: 'https://www.mir24.ru/gde-tam-legit-kartinka/img1'
-                    title: "Встреча Путина с Обамой",
-                    alt: "Встреча Путина с Обамой",
-                    copyright_author: "Пономарев Андрей"
-                    copyright_origin: "Интерфакс"
-                    copyright_link: "ya.ru"
-                    main: false
-                ]
-            ]
-        
 ## Сюжеты Topic [/topic]
 
 ### Получить сюжет по id [GET /topic/{model}]
@@ -2688,5 +2630,107 @@ HOST: http://mir24.ru/api/v1
     + Body
 
             {
+                "id": 12,
+                "date": "2000-08-15 10:10:11",
+                "height": 718,
+                "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Lotus_flower_%28978659%29.jpg/300px-Lotus_flower_%28978659%29.jpg",
+                "width": 776,
+                "title": "sit",
+                "alt": "aliquam",
+                "deleted": false,
+                "copyright_id": null,
+                "main": null,
+                "created": 1472210415,
+                "updated": 1472210415
+            }
+
+### Получить ассоциативный массив новостей [GET /images/{limit}/{offset}]
+
++ Parameters
+
+    + limit: 10 (number) - Лимит новостей
+    + offset: 0 (number) - Смещение новостей
+
++ Response 200 (application/json)
+
+            {
 
             }
+
+### Отправить картинки [POST /images/add]
+
++ Request (multipart/form-data; boundary=------WebKitFormBoundaryh3SgKjplOFCAvWgK)
+    
+        ------WebKitFormBoundaryh3SgKjplOFCAvWgK
+        Content-Disposition: form-data; name="photoshop.png"; filename="photoshop.png"
+        Content-Type: image/png
+
+
+        ------WebKitFormBoundaryh3SgKjplOFCAvWgK
+    
+        Content-Disposition: form-data; name="title"
+
+        Встреча Путина с Обамой
+        ------WebKitFormBoundaryh3SgKjplOFCAvWgK
+        Content-Disposition: form-data; name="alt"
+
+        Встреча Путина с Обамой
+        ------WebKitFormBoundaryh3SgKjplOFCAvWgK
+        Content-Disposition: form-data; name="copyright_author"
+    
+        Пономарев Андрей
+        ------WebKitFormBoundaryh3SgKjplOFCAvWgK
+        Content-Disposition: form-data; name="copyright_origin"
+
+        Интерфакс
+        ------WebKitFormBoundaryh3SgKjplOFCAvWgK
+        Content-Disposition: form-data; name="copyright_link"
+    
+        ya.ru
+        ------WebKitFormBoundaryh3SgKjplOFCAvWgK
+        Content-Disposition: form-data; name="main"
+    
+        false
+        ------WebKitFormBoundaryh3SgKjplOFCAvWgK--
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /news/12
+
+    + Body
+            
+            "images":[
+                [
+                    src: 'https://www.mir24.ru/gde-tam-legit-kartinka/img1'
+                    title: "Встреча Путина с Обамой",
+                    alt: "Встреча Путина с Обамой",
+                    copyright_author: "Пономарев Андрей"
+                    copyright_origin: "Интерфакс"
+                    copyright_link: "ya.ru"
+                    main: false
+                ]
+            ]
+
+### Изменить новость [PUT /images/update]
+
+Получает JSON, содержащий поля для модели.
+
++ Request (application/json)
+
+        {
+
+        }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /images/12
+
+    + Body
+
+                {
+
+                }
