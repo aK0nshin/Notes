@@ -2613,6 +2613,115 @@ HOST: http://mir24.ru/api/v1
             {
                 "saved": true
             }
+            
+## Супертеги [/supertags]
+
+### Получить супертег по id [GET /supertags/{id:[0-9]+}]
+
+Получить информацию по супертегу по id
+
++ Parameters
+
+    + id: 3 (number) - id супертега
+    
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                "id": 42,
+                "title": "Кухни мира",
+                "deleted": false,
+                "color": "#AD1457"
+            }
+
+### Получить массив супертегов [GET /supertags/]
+
+Получить весь массив супертегов
+    
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                '42': {
+                    "title": "Кухни мира",
+                    "deleted": false,
+                    "color": "#AD1457"
+                },
+                '43': {
+                    "title": "Культура",
+                    "deleted": false,
+                    "color": "#6200EA"
+                },
+                '44': {
+                    "title": "Спорт",
+                    "deleted": false,
+                    "color": "#0288D1"
+                },
+                '45': {
+                    "title": "Путеводитель",
+                    "deleted": false,
+                    "color": "#FF9800"
+                }
+            }
+            
+### Изменить супертег [PUT /supertags/]
+
+Изменить супертег
+    
++ Request (application/json)
+
+        {
+            "id": 42
+            "title": "Больше не кухни мира",
+            "deleted": false,
+            "color": "#AD1457"
+        }
+        
++ Response 200 (application/json)
+
+    + Body
+
+            {"success": true,
+                "data":
+                    {
+                        "id": 42
+                        "title": "Больше не кухни мира",
+                        "deleted": false,
+                        "color": "#AD1457"
+                    }
+            }
+                
+### Создать супертег [POST /supertags/]
+
+Создать супертег
+
++ Request (application/json)
+
+        {
+            "title": "Новый супертег",
+            "deleted": false,
+            "color": "#AD1457"
+        }
+    
++ Response 200 (application/json)
+
+    + Body
+
+            {"success": true,
+                "data":
+                    {
+                        "id": 8
+                        "title": "Новый супертег",
+                        "deleted": false,
+                        "color": "#AD1457"
+                    }
+            }
+            
+
+
+
 
 ## Изображения Image [/images]
 
