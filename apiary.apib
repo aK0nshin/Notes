@@ -2614,9 +2614,45 @@ HOST: http://mir24.ru/api/v1
                 "saved": true
             }
             
-## Супертеги [/supertags]
+## Теги Tags [/tags]
 
-### Получить супертег по id [GET /supertags/{id:[0-9]+}]
+### Поиск по заголовку [GET /tags/{number}/search?{query}]
+
+Получить массив тегов по заголовку и номеру модели
+
++ Parameters
+
+    + query: 'Жизн' (string) - текст заголовка, number: 3 (number) - номер модели
+    
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                '23': {
+                    "title": "Жизнь замечательных людей",
+                    "deleted": false,
+                    "color": "#AD1457"
+                },
+                '24': {
+                    "title": "Образ жизни",
+                    "deleted": false,
+                    "color": "#6200EA"
+                },
+                '25': {
+                    "title": "Жизненный цикл",
+                    "deleted": false,
+                    "color": "#0288D1"
+                },
+                '26': {
+                    "title": "Победители по жизни",
+                    "deleted": false,
+                    "color": "#FF9800"
+                }
+            }
+
+
+### Получить супертег по id [GET /tags/3/{id:[0-9]+}]
 
 Получить информацию по супертегу по id
 
@@ -2635,7 +2671,7 @@ HOST: http://mir24.ru/api/v1
                 "color": "#AD1457"
             }
 
-### Получить массив супертегов [GET /supertags/]
+### Получить массив супертегов [GET /tags/3]
 
 Получить весь массив супертегов
     
@@ -2666,7 +2702,7 @@ HOST: http://mir24.ru/api/v1
                 }
             }
             
-### Изменить супертег [PUT /supertags/]
+### Изменить супертег [PUT /tags/3]
 
 Изменить супертег
     
@@ -2693,7 +2729,7 @@ HOST: http://mir24.ru/api/v1
                     }
             }
                 
-### Создать супертег [POST /supertags/]
+### Создать супертег [POST /tags/3]
 
 Создать супертег
 
@@ -2716,6 +2752,206 @@ HOST: http://mir24.ru/api/v1
                         "title": "Новый супертег",
                         "deleted": false,
                         "color": "#AD1457"
+                    }
+            }
+            
+            
+            
+            
+            
+            
+            
+### Получить геотег по id [GET /tags/2/{id:[0-9]+}]
+
+Получить информацию по геотегу по id
+
++ Parameters
+
+    + id: 42 (number) - id геотега
+    
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                "id": 42,
+                "title": "Украина",
+                "deleted": false,
+            }
+
+### Получить массив геотегов [GET /tags/2]
+
+Получить весь массив геотегов
+    
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                '42': {
+                    "title": "Украина",
+                    "deleted": false,
+                    "color": "#AD1457"
+                },
+                '43': {
+                    "title": "Беларусь",
+                    "deleted": false,
+                    "color": "#6200EA"
+                },
+                '44': {
+                    "title": "Казахстан",
+                    "deleted": false,
+                    "color": "#0288D1"
+                },
+                '45': {
+                    "title": "Австралия",
+                    "deleted": false,
+                    "color": "#FF9800"
+                }
+            }
+            
+### Изменить геотег [PUT /tags/2]
+
+Изменить супертег
+    
++ Request (application/json)
+
+        {
+            "id": 42
+            "title": "Больше не Украина",
+            "deleted": false
+        }
+        
++ Response 200 (application/json)
+
+    + Body
+
+            {"success": true,
+                "data":
+                    {
+                        "id": 42
+                        "title": "Больше не Украина",
+                        "deleted": false
+                    }
+            }
+                
+### Создать геотег [POST /tags/2]
+
+Создать супертег
+
++ Request (application/json)
+
+        {
+            "title": "Византия",
+            "deleted": false
+        }
+    
++ Response 200 (application/json)
+
+    + Body
+
+            {"success": true,
+                "data":
+                    {
+                        "id": 8
+                        "title": "Византия",
+                        "deleted": false
+                    }
+            }
+            
+
+
+### Получить тег по id [GET /tags/1/{id:[0-9]+}]
+
+Получить информацию по тегу по id
+
++ Parameters
+
+    + id: 42 (number) - id тега
+    
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                "id": 42,
+                "title": "Путин",
+                "deleted": false,
+            }
+
+### Получить массив тегов [GET /tags/1]
+
+Получить весь массив геотегов
+    
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                '42': {
+                    "title": "Путин",
+                    "deleted": false
+                },
+                '43': {
+                    "title": "Пожар в типографии",
+                    "deleted": false
+                },
+                '44': {
+                    "title": "Допинг",
+                    "deleted": false
+                },
+                '45': {
+                    "title": "Brexit",
+                    "deleted": false
+                }
+            }
+            
+### Изменить тег [PUT /tags/1]
+
+Изменить тег
+    
++ Request (application/json)
+
+        {
+            "id": 43
+            "title": "Ядерные испытания КНДР",
+            "deleted": false
+        }
+        
++ Response 200 (application/json)
+
+    + Body
+
+            {"success": true,
+                "data":
+                    {
+                        "id": 43
+                        "title": "Ядерные испытания КНДР",
+                        "deleted": false
+                    }
+            }
+                
+### Создать тег [POST /tags/1]
+
+Создать тег
+
++ Request (application/json)
+
+        {
+            "title": "Обама на саммите",
+            "deleted": false
+        }
+    
++ Response 200 (application/json)
+
+    + Body
+
+            {"success": true,
+                "data":
+                    {
+                        "id": 8
+                        "title": "Обама на саммите",
+                        "deleted": false
                     }
             }
             
