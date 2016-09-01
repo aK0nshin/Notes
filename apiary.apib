@@ -2255,6 +2255,49 @@ HOST: http://mir24.ru/api/v1
 
 ## Сетки Grids [/grids]
 
+### Поиск для сетки: новости, статьи, фотоленты, видеосюжеты [POST /grids/search]
+
+Принимает строку. Возвращает ассоциативный массив ТОЛЬКО ОПУБЛИКОВАННЫХ новостей, сюжетов, статей, фотолент и видеосюжетов, в title которых входит принятая подстрока.
+
++ Request (application/json)
+
+        {
+          "query": "Путин"
+        }
+
++ Response 200 (application/json)
+
+           {
+           "news":{
+               "12744": {
+               "published": 1467588707,
+               "title": "Путин снова перехитрил Обаму",
+               "text": "Repudiandae et amet numqus non.",
+               "images": [
+                  {
+                    "id": 10989391,
+                    "created_at": "2016-08-02 13:41:02",
+                    "updated_at": "2016-08-31 09:54:19",
+                    "date": null,
+                    "height": null,
+                    "src": "http://stc01.mir24.tv/media/images/uploaded/inner10989391.jpg",
+                    "width": null,
+                    "title": "Россияне уже через два года перейдут с банковских карт на смартфоны",
+                    "alt": "Россияне уже через два года перейдут с банковских карт на cухпаек",
+                    "deleted": null,
+                    "copyright_id": 1,
+                    "main": true,
+                    "copyright_author": "",
+                    "copyright_link": "",
+                    "copyright_origin": ""
+                  }
+                ],
+               "supertags": [16],
+                }
+            }
+        }
+          
+
 ### Получить сетку главной страницы [GET /grids/{modelName}]
 
 Возвращает ассоциативный массив сетки страницы.
