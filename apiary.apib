@@ -3001,3 +3001,67 @@ HOST: http://mir24.ru/api/v1
                 {
 
                 }
+                
+                
+## Пользователи User [/user]
+
+### Логин пользователя [POST /user/login]
+
+Получает JSON, содержащий поля для модели (Либо email + password, либо remember_token/token), где роли 1,2,3, соответственно, админ, старший редактор, редактор.
+
++ Request (application/json)
+        
+        {
+            "email": "mail@mail.com",
+            "password": "somefancyhashedpassword",
+        }
+            
++ Response 200 (application/json)
+
+        {
+            "name": "User1",
+            "token": "ANWnon32102NWodwanAOW21",
+            "role": 1,
+        }
+            
+### Логаут пользователя [POST /user/logout]
+
+Получает JSON, содержащий поля для модели
+
++ Request (application/json)
+    
+        {
+            "token": "ANWnon32102NWodwanAOW21"
+        }
+        
++ Response 200 (application/json)
+
+        {
+            "Logout"
+        }
+        
+### Создание пользователя [POST /user/create]
+
+Получает JSON, содержащий поля для модели
+
++ Request (application/json)
+
+        {
+            "email": "mail@mail.com",
+            "password": "somefancyhashedpassword",
+            "name": "User1",
+            "role": 1,
+            "deleted": 0,
+        }
+        
++ Response 200 (application/json)
+
+        {
+            "name": "User1",
+            "email": "mail@mail.com",
+            "role": 1,
+            "deleted": 0,
+            "updated_at": "2016-09-13 11:59:15",
+            "created_at": "2016-09-13 11:59:15",
+            "id": 13
+        }
