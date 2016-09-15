@@ -2872,37 +2872,31 @@ HOST: http://mir24.ru/api/v1
 
 + Request (multipart/form-data; boundary=------WebKitFormBoundaryh3SgKjplOFCAvWgK)
     
-        ------WebKitFormBoundaryh3SgKjplOFCAvWgK
-        Content-Disposition: form-data; name="FileUpload_1"; filename="photoshop.png"
+        ------WebKitFormBoundarywQWcoPPeCUAgZPJv
+        Content-Disposition: form-data; name="meta_4"
+        
+        {"title":"Titleeeeeee","alt":"Aaaaaaalt","copyright_author":"Authooooooor","copyright_link":"Liiiink","copyright_origin":"Copyyyyyyy","main":false}
+        ------WebKitFormBoundarywQWcoPPeCUAgZPJv
+        Content-Disposition: form-data; name="original_4"; filename="mir_tv.png"
         Content-Type: image/png
-
-
-        ------WebKitFormBoundaryh3SgKjplOFCAvWgK
-    
-        Content-Disposition: form-data; name="title"
-
-        Встреча Путина с Обамой
-        ------WebKitFormBoundaryh3SgKjplOFCAvWgK
-        Content-Disposition: form-data; name="alt"
-
-        Встреча Путина с Обамой
-        ------WebKitFormBoundaryh3SgKjplOFCAvWgK
-        Content-Disposition: form-data; name="copyright_author"
-    
-        Пономарев Андрей
-        ------WebKitFormBoundaryh3SgKjplOFCAvWgK
-        Content-Disposition: form-data; name="copyright_origin"
-
-        Интерфакс
-        ------WebKitFormBoundaryh3SgKjplOFCAvWgK
-        Content-Disposition: form-data; name="copyright_link"
-    
-        ya.ru
-        ------WebKitFormBoundaryh3SgKjplOFCAvWgK
-        Content-Disposition: form-data; name="main"
-    
-        false
-        ------WebKitFormBoundaryh3SgKjplOFCAvWgK--
+        
+        
+        ------WebKitFormBoundarywQWcoPPeCUAgZPJv
+        Content-Disposition: form-data; name="small_4"; filename="file.png"
+        Content-Type: image/png
+        
+        
+        ------WebKitFormBoundarywQWcoPPeCUAgZPJv
+        Content-Disposition: form-data; name="medium_4"; filename="file.png"
+        Content-Type: image/png
+        
+        
+        ------WebKitFormBoundarywQWcoPPeCUAgZPJv
+        Content-Disposition: form-data; name="large_4"; filename="file.png"
+        Content-Type: image/png
+        
+        
+        ------WebKitFormBoundarywQWcoPPeCUAgZPJv--
 
 + Response 201 (application/json)
 
@@ -2912,17 +2906,35 @@ HOST: http://mir24.ru/api/v1
 
     + Body
             
-            "images":[
-                [
-                    src: 'https://www.mir24.ru/gde-tam-legit-kartinka/img1'
-                    title: "Встреча Путина с Обамой",
-                    alt: "Встреча Путина с Обамой",
-                    copyright_author: "Пономарев Андрей"
-                    copyright_origin: "Интерфакс"
-                    copyright_link: "ya.ru"
-                    main: false
-                ]
-            ]
+            {
+                "images": [
+                    {
+                        "id": 14993162,
+                        "original": "\/uploaded\/images\/2016\/September\/5b60972c136161b2097aec75f36a710a.png",
+                        "small": "\/uploaded\/images\/2016\/September\/5b60972c136161b2097aec75f36a710a.png",
+                        "medium": "\/uploaded\/images\/2016\/September\/5b60972c136161b2097aec75f36a710a.png",
+                        "large": "\/uploaded\/images\/2016\/September\/5b60972c136161b2097aec75f36a710a.png",
+                        "title": "",
+                        "alt": "",
+                        "main": true,
+                        "copyright_author": "Fafa Guslu",
+                        "copyright_link": "http://gufdnu.vr",
+                        "copyright_origin": "Hte glonal jgnnv",
+                    },
+                    {
+                        "id": 14993163,
+                        "original": "\/uploaded\/images\/2016\/September\/5b60972c136161b2097aec75f36a710a.png",
+                        "small": "\/uploaded\/images\/2016\/September\/5b60972c136161b2097aec75f36a710a.png",
+                        "medium": "\/uploaded\/images\/2016\/September\/5b60972c136161b2097aec75f36a710a.png",
+                        "large": "\/uploaded\/images\/2016\/September\/5b60972c136161b2097aec75f36a710a.png",
+                        "title": "",
+                        "alt": "",
+                        "main": true,
+                        "copyright_author": "Nfar Zyged",
+                        "copyright_link": "http://fortwrot.vc",
+                        "copyright_origin": "Monfd bulsed",
+                    },]
+            }
 
 ### Создать новость [POST /images/add]
 
