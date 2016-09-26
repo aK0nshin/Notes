@@ -2920,7 +2920,44 @@ HOST: http://mir24.ru/api/v1
                 "link": "http://gufdnu.vr",
             }
             
+### Отправить мету [PUT /images/update/]
+
++ Request (application/json)
+        
+        [
+            {
+                  "id": 123556
+                  "title": "Встреча Путина с Обамой",
+                  "alt": "Встреча Путина с Обамой",
+                  "copyright_author": "Пономарев Андрей",
+                  "copyright_origin": "Интерфакс",
+                  "copyright_link": "ya.ru",
+                  "main": false
+            },
+            {
+                  id: 1235467
+                  "title": "Встреча Путина не с Обамой",
+                  "alt": "Встреча Путина не с Обамой",
+                  "copyright_author": "Саша Коншин",
+                  "copyright_origin": "Интерфакс",
+                  "copyright_link": "ya.ru",
+                  "main": false
+            }
+        ]
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /news/12
+
+    + Body
             
+            {
+                success: true
+            }
+            
+           
             
 ### Создать новость [POST /images/add]
 
@@ -2934,7 +2971,7 @@ HOST: http://mir24.ru/api/v1
                   "title": "Встреча Путина с Обамой",
                   "alt": "Встреча Путина с Обамой",
                   "copyright_author": "Пономарев Андрей",
-                  "copyright_originges ": "Интерфакс",
+                  "copyright_origin": "Интерфакс",
                   "copyright_link": "ya.ru",
                   "main": false
                },
