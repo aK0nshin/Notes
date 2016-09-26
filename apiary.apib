@@ -2871,28 +2871,9 @@ HOST: http://mir24.ru/api/v1
 ### Отправить картинки [POST /images/upload]
 
 + Request (multipart/form-data; boundary=------WebKitFormBoundaryh3SgKjplOFCAvWgK)
-    
-        ------WebKitFormBoundarywQWcoPPeCUAgZPJv
-        Content-Disposition: form-data; name="meta_4"
-        
-        {"title":"Titleeeeeee","alt":"Aaaaaaalt","copyright_author":"Authooooooor","copyright_link":"Liiiink","copyright_origin":"Copyyyyyyy","main":false}
-        ------WebKitFormBoundarywQWcoPPeCUAgZPJv
-        Content-Disposition: form-data; name="original_4"; filename="mir_tv.png"
-        Content-Type: image/png
-        
         
         ------WebKitFormBoundarywQWcoPPeCUAgZPJv
-        Content-Disposition: form-data; name="small_4"; filename="file.png"
-        Content-Type: image/png
-        
-        
-        ------WebKitFormBoundarywQWcoPPeCUAgZPJv
-        Content-Disposition: form-data; name="medium_4"; filename="file.png"
-        Content-Type: image/png
-        
-        
-        ------WebKitFormBoundarywQWcoPPeCUAgZPJv
-        Content-Disposition: form-data; name="large_4"; filename="file.png"
+        Content-Disposition: form-data; name="original"; filename="file.png"
         Content-Type: image/png
         
         
@@ -2907,35 +2888,40 @@ HOST: http://mir24.ru/api/v1
     + Body
             
             {
-                "images": [
-                    {
-                        "id": 14993162,
-                        "original": "\/uploaded\/images\/2016\/September\/5b60972c136161b2097aec75f36a710a.png",
-                        "small": "\/uploaded\/images\/2016\/September\/5b60972c136161b2097aec75f36a710a.png",
-                        "medium": "\/uploaded\/images\/2016\/September\/5b60972c136161b2097aec75f36a710a.png",
-                        "large": "\/uploaded\/images\/2016\/September\/5b60972c136161b2097aec75f36a710a.png",
-                        "title": "",
-                        "alt": "",
-                        "main": true,
-                        "copyright_author": "Fafa Guslu",
-                        "copyright_link": "http://gufdnu.vr",
-                        "copyright_origin": "Hte glonal jgnnv",
-                    },
-                    {
-                        "id": 14993163,
-                        "original": "\/uploaded\/images\/2016\/September\/5b60972c136161b2097aec75f36a710a.png",
-                        "small": "\/uploaded\/images\/2016\/September\/5b60972c136161b2097aec75f36a710a.png",
-                        "medium": "\/uploaded\/images\/2016\/September\/5b60972c136161b2097aec75f36a710a.png",
-                        "large": "\/uploaded\/images\/2016\/September\/5b60972c136161b2097aec75f36a710a.png",
-                        "title": "",
-                        "alt": "",
-                        "main": true,
-                        "copyright_author": "Nfar Zyged",
-                        "copyright_link": "http://fortwrot.vc",
-                        "copyright_origin": "Monfd bulsed",
-                    },]
+                "id": 14993162,
+                "link": "http://gufdnu.vr",
             }
+            
+            
+            
+### Отправить кроп [PUT /images/{id}/]
 
++ Request (multipart/form-data; boundary=------WebKitFormBoundaryh3SgKjplOFCAvWgK)
+        
+        {
+            "main/detail": {
+                "xCoord": 12,
+                "yCoord": 34,
+                "width": 640,
+                "height":480
+            }
+        }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /news/12
+
+    + Body
+            
+            {
+                "id": 14993162,
+                "link": "http://gufdnu.vr",
+            }
+            
+            
+            
 ### Создать новость [POST /images/add]
 
 Получает JSON, содержащий поля для модели.
