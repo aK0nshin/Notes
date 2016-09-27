@@ -2868,7 +2868,7 @@ HOST: http://mir24.ru/api/v1
 
             }
 
-### Отправить картинки [POST /images/upload]
+### Отправить изображение [POST /images/upload]
 
 + Request (multipart/form-data; boundary=------WebKitFormBoundaryh3SgKjplOFCAvWgK)
         
@@ -2892,9 +2892,24 @@ HOST: http://mir24.ru/api/v1
                 "link": "http://gufdnu.vr",
             }
             
+
+### Удалить изображение [DELETE /images/{id}]
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /news/12
+
+    + Body
             
+            {
+                "success": true
+            }
             
-### Отправить кроп [PUT /images/{id}/]
+                        
+            
+### Отправить кроп [PATCH /images/{id}/]
 
 + Request (application/json)
         
@@ -2919,6 +2934,25 @@ HOST: http://mir24.ru/api/v1
                 "id": 14993162,
                 "link": "http://gufdnu.vr",
             }
+            
+### Удалить кроп [PUT /images/{id}/]
+
++ Request (application/json)
+        
+        {'type':'detail'}
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /news/12
+
+    + Body
+            
+            {
+                "success": true
+            }
+            
             
 ### Отправить мету [PUT /images/update/]
 
